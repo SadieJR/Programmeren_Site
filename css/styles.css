@@ -1,0 +1,148 @@
+body{
+    background-color: lightblue;
+}
+
+#ocean{
+   position: relative;
+   width: 1000px;
+   height: 700px;
+   overflow: hidden;
+   margin-inline: auto;
+   margin-block: auto;
+}
+
+#oceanfloor{
+   width: 1000px;
+   height: 500px;
+}
+
+#pufferfish{
+   position: absolute;
+   width: 450px;
+
+   bottom:150px;
+   left: 300px;
+}
+ 
+#pufferfish.spring {
+    content: url('../images/pufferfish_normal.png');
+    animation: 0.5s jump ease-in;
+}
+
+#pufferfish.kietelen {
+    animation: 0.5s kietelen infinite ;
+}
+
+#pufferfish.zinken {
+    animation: 2.5s zinken ease-in;
+}
+
+#rotatebutton{
+    position: absolute;
+    width: 50px;
+    top: 60px;
+    left: 70px;
+    cursor: pointer;
+}
+
+#healingbutton{
+    position: absolute;
+    width: 60px;
+    top: 60px;
+    right: 750px;
+    cursor: pointer;
+}
+
+#fishbutton{
+    position: absolute;
+    width: 60px;
+    top: 170px;
+    right: 750px;
+    cursor: pointer;
+}
+
+#bubblebutton{
+    position: absolute;
+    width: 60px;
+    top: 160px;
+    right: 870px;
+    cursor: pointer;
+}
+
+h1{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 300px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+#tekst {
+    position: absolute;
+    background-color: rgb(210, 239, 248);
+    border-radius: 1em;
+    width: 300px;
+    height: 50px;
+    padding-top: 10px;
+    text-align: center;
+    top: 40px;
+    left: 600px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#uitleg {
+    margin-top: 0px;
+    margin-left: 350px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#tekstinput {
+    position: absolute;
+    width: 12em;
+    height: 1.5em;
+    top: 130px;
+    right: 165px;
+    border-radius: 6px;
+    border-color: gainsboro;
+    background-color:rgb(208, 236, 245);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* ========= animaties voor de vis ========== */
+
+@keyframes jump {
+    0% { 
+        transform:  translateY( 0 ) rotate( 0 ); 
+    }
+    50% {
+        transform:  translateY( -10px ) rotate(180deg); 
+    }
+    100%   { 
+        transform: translateY( 0 ) rotate(360deg); 
+    }
+  }
+
+  @keyframes kietelen {
+    0% {
+        transform: rotate(0)
+    }
+    25% {
+        transform: rotate(5deg)
+    }
+    50% {
+        transform: rotate(0)
+    }
+    75% {
+        transform: rotate(-5deg)
+    }
+    100% {
+        transform: rotate(0)
+    }
+}
+
+@keyframes zinken {
+    from { bottom:260px; left: 300px; }
+    to   { bottom: 100px; left: 300px; }
+   
+  }
+  
